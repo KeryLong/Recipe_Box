@@ -2,17 +2,19 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDVqJ4wCIcDok5g4F3H5PJ9rbVvI7mCUDY",
-  authDomain: "ppmapp-415b7.firebaseapp.com",
-  projectId: "ppmapp-415b7",
-  storageBucket: "ppmapp-415b7.appspot.com",
-  messagingSenderId: "1064200859421",
-  appId: "1:1064200859421:web:08aae1615370c1f406fbf4",
-  measurementId: "G-XPXJDR3XFL"
+  apiKey: "AIzaSyAU7lCXjoV0epjtm0UkSsyI8rk3PTmBN1U",
+  authDomain: "recipebox-7c39d.firebaseapp.com",
+  projectId: "recipebox-7c39d",
+  storageBucket: "recipebox-7c39d.appspot.com",
+  messagingSenderId: "462523959683",
+  appId: "1:462523959683:web:d177c8a46c514ac37b4eb6",
+  measurementId: "G-1KGXRSVZVZ"
 };
   
 // init firebase
-firebase.initializeApp(firebaseConfig)
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 // init services
 const projectFirestore = firebase.firestore()
